@@ -1,15 +1,15 @@
 require 'sinatra'
 require 'redis'
 
-
-# access redis within the context of an HTTP request
-get '/' do
-  "Well, hello!"
+if ENV['RACK_ENV'] == 'production'
   uri = URI.parse(ENV["REDISTOGO_URL"])
-  redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-  if redis 
-    "Redis appears to be working ..."
-  else
-    "Redis is down"
-  end
+  REDIS= Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+else
+  REDIS= Redis.new
+  lalala = "hello"
+end
+
+get '/' do
+  REDIS.set "foo", "bar"
+  "Redis appears to be working ..."
 end
