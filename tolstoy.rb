@@ -8,7 +8,10 @@ end
 
 # access redis within the context of an HTTP request
 get '/' do
+  "Hello!"
+end
+
+get 'database_test' do
   @foos = redis.lrange("foos", 0, -1) # Array
   @foos.inspect
 end
-
