@@ -3,6 +3,8 @@ import redis
 
 # connect to the database
 rdb = redis.Redis(host='localhost', port=6379, db=1)
+
+# delete previous key if it exists
 rdb.delete('tweets')
 
 # open the data file containing the json dump
