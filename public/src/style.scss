@@ -27,3 +27,26 @@
 
 // Media should come last
 @import "partials/media";
+
+header {
+  .header_inner {
+    width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+  img#tolstoy, .quote {    
+    float: left;
+    padding: 10px;
+    width: 150px;
+  }
+border-bottom: 1px solid #c3c3c3;  
+float: left;
+clear: both;
+width: 100%;
+}
+
+#fig {
+  width: 400px;
+  height: 2220px;
+}
+

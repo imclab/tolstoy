@@ -384,3 +384,28 @@ input:invalid, textarea:invalid {
 @media all and (orientation:portrait) {}
 @media all and (orientation:landscape) {}
 @media screen and (max-device-width: 480px) {}
+/* line 31, ../src/style.scss */
+header {
+  border-bottom: 1px solid #c3c3c3;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+/* line 32, ../src/style.scss */
+header .header_inner {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
+}
+/* line 37, ../src/style.scss */
+header img#tolstoy, header .quote {
+  float: left;
+  padding: 10px;
+  width: 150px;
+}
+
+/* line 48, ../src/style.scss */
+#fig {
+  width: 400px;
+  height: 2220px;
+}
