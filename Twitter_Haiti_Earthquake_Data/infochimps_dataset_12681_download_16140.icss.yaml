@@ -1,0 +1,65 @@
+---
+infochimps_schema:
+  title: Infochimps Simple Schema (ICSS)
+  version: 0.1
+  generated_at: Tue Jan 19 23:55:52 +0000 2010
+  url: "http://infochimps.org/payloads/16140.yaml"
+  description: >-
+    This is an Infochimps Simple Schema (ICSS).
+
+    It describes data on Infochimps.org and is meant to be both human
+    and machine readable.
+
+    An ICSS file is distributed with every download on Infochimps and
+    is also available by request to the above URL.
+    
+    ICSS files bundled with downloads are generated at the time the
+    download was created so they can become out of date as changes are
+    made to the data.  If this ICSS came with data you downloaded then
+    it is possible that it is already out of date.  You can get the
+    most recent version at the URL above.
+
+dataset:
+  id: 12681
+  title: Twitter Haiti Earthquake Data
+  subtitle: ~
+  main_link: ~
+  url: "http://infochimps.org/datasets/twitter-haiti-earthquake-data"
+  created_at: "Tue Jan 19 20:21:13 UTC 2010"
+  updated_at: "Tue Jan 19 20:21:13 UTC 2010"  
+  tags: [ twitter,earthquake,haiti ]
+  categories: [ "Computers::Social Networks" ]
+  created_by:
+    id: 128  
+    username: semanticvoid
+    name: anand kishore
+    institution: ~
+    main_link: "http://semanticvoid.com"
+    url: "http://infochimps.org/users/semanticvoid"
+  description: >-
+    Twitter Haiti Earthquake Data (JSON dump)
+  sources:
+    
+    - id: 13433
+      title: Twitter API
+      main_link: "http://apiwiki.twitter.com/"
+      url: "http://infochimps.org/sources/twitter-api"
+      description: >-
+        The Twitter API currently consists of two discrete APIs. Most application developers mix and match the APIs to produce their application. The separation of the REST and Search APIs is less than ideal and it is entirely due to history It is in our pipeline to ameliorate Twitter's API by combining the Search and REST pieces as development cycles allow. The API Overview portion of the Getting Started series explains the history.
+    
+  data:
+    id: 16140
+    title: Twitter Streaming JSON Dump 
+    number_of_records: 63195
+    url: "http://infochimps.org/payloads/16140"
+    description: >-
+      
+    fields:
+      
+    license:
+      id: 
+      title: ~
+      main_link: ~
+      url: ~            
+      description: >-
+        
