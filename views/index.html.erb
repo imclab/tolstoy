@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class='no-js'>
+  <!--<![endif]-->
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <title>Tolstoy</title>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+    <link href='css/style.css?v=1' media='all' rel='stylesheet' />
+    <script src='js/modernizr.min.js'></script>
+    <script type="text/javascript" src="js/protovis/protovis-r3.2.js"></script>
+    <script type="text/javascript" src="js/test.js"></script>
+    
+  </head>
+  
+  <body lang='en'>
+    <div id='container'>
+      <header>
+        <span class="header_inner">
+          <img id="tolstoy" src="images/leo.jpg">
+          <span class="quote">&ldquo;In the name of God, stop a moment, cease your work, look around you.&rdquo; <br /> <i>Leo Tolstoy</i></span>
+        </span>
+      </header>
+      <div id='main'>      
+        <div id="center"><div id="fig">
+    
+      <script type="text/javascript+protovis">
+
+      var vis = new pv.Panel()
+          .width(1300)
+          .height(1300)
+          .left(40)
+          .right(160)
+          .top(10)
+          .bottom(10);
+
+      var layout = vis.add(pv.Layout.Cluster)
+          .nodes(pv.dom(test)
+              .root("test")
+              .sort(function(a, b) pv.naturalOrder(a.nodeName, b.nodeName))
+              .nodes())
+          .group(true)
+          .orient("left");
+
+      layout.link.add(pv.Line)
+          .strokeStyle("#ccc")
+          .lineWidth(1)
+          .antialias(false);
+
+      layout.node.add(pv.Dot)
+          .fillStyle(function(n) n.firstChild ? "#aec7e8" : "#ff7f0e");
+
+      layout.label.add(pv.Label);
+
+      vis.render(test);
+    
+      </script>
+        </div>
+      <footer></footer>
+    </div>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js'></script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        !window.jQuery && document.write(unescape('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))
+      //]]>
+    </script>
+    
+    <script src='js/plugins.js?v=1'></script>
+    <script src='js/script.js?v=1'></script>
+
+    <!-- http://www.dillerdesign.com/experiment/DD_belatedPNG/ -->
+    <!--[if lt IE 7 ]>
+      
+      <script type='text/javascript'>
+        //<![CDATA[
+          $.getScript("js/dd_belatedpng.js",function(){ DD_belatedPNG.fix('img, .png_bg'); });
+        //]]>
+      </script>
+    <![endif]-->
+
+    <!--  No stats for now please!
+      <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
+        (function(d, t) {
+         var g = d.createElement(t),
+             s = d.getElementsByTagName(t)[0];
+         g.async = true;
+         g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         s.parentNode.insertBefore(g, s);
+        })(document, 'script');
+      //]]>
+    </script> 
+    
+    -->
+  </body>
+</html>
